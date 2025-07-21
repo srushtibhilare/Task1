@@ -1,0 +1,121 @@
+/* Cart Item Container */
+.cart-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #f3f4f6;
+  transition: background-color 0.2s ease;
+}
+
+.cart-item:hover {
+  background-color: #f9fafb;
+}
+
+/* Product Image Placeholder */
+.cart-item-image-placeholder {
+  height: 5rem;
+  width: 5rem;
+  background-color: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  border-radius: 0.25rem;
+}
+
+.cart-item-image-placeholder-text {
+  color: #9ca3af;
+  font-size: 0.75rem;
+}
+
+/* Product Info */
+.cart-item-info {
+  flex-grow: 1;
+  min-width: 0; /* Prevent flex overflow */
+}
+
+.cart-item-name {
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cart-item-price {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+/* Quantity Controls */
+.cart-item-quantity-controls {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.quantity-btn {
+  background-color: #e5e7eb;
+  padding: 0.25rem 0.75rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.quantity-btn:hover {
+  background-color: #d1d5db;
+}
+
+.quantity-btn:first-child {
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.quantity-btn:last-child {
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.quantity-display {
+  padding: 0.25rem 1rem;
+  background-color: #f3f4f6;
+}
+
+/* Remove Button */
+.remove-btn {
+  margin-left: 1.5rem;
+  color: #6b7280;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.remove-btn:hover {
+  color: #dc2626;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 640px) {
+  .cart-item {
+    flex-wrap: wrap;
+    padding: 0.75rem;
+  }
+
+  .cart-item-image-placeholder {
+    height: 4rem;
+    width: 4rem;
+  }
+
+  .cart-item-quantity-controls {
+    margin: 0.5rem 0;
+    order: 3;
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .remove-btn {
+    margin-left: auto;
+  }
+}
